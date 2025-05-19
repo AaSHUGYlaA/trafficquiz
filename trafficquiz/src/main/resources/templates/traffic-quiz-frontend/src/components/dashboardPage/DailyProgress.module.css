@@ -1,0 +1,78 @@
+.progressSection {
+  background-color: #35284e;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  padding: 32px;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.progressBar {
+  background-color: #2b223e;
+  border-radius: 100px;
+  height: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.progressFill {
+  background-color: #7a68ff;
+  border-radius: 100px;
+  width: 60%;
+  height: 100%;
+}
+
+.progressCount {
+  color: gold;
+  text-align: right;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.statsGrid {
+  gap: 24px;
+  display: flex;
+}
+
+.statCard {
+  background-color: #2b223e;
+  border-radius: 15px;
+  flex: 1;
+  padding: 10px;
+}
+
+.statIcon {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.statTitle {
+  color: #fff;
+  /*margin-bottom: 16px;*/
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.statValue {
+  color: #7a68ff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+@media (width <= 991px) {
+  .statsGrid {
+    flex-direction: column;
+  }
+}
+
+@media (width <= 640px) {
+  .progressSection {
+    padding: 16px;
+  }
+}

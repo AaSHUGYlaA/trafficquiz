@@ -1,0 +1,263 @@
+.generatedDesign {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.rectangle {
+  background-color: #2b223e;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 80px 141px;
+  display: flex;
+}
+
+.contentWrapper {
+  flex-direction: column;
+  align-items: stretch;
+  width: 480px;
+  max-width: 100%;
+  margin-bottom: -28px;
+  display: flex;
+}
+
+.headerSection {
+  color: #fcfcfc;
+  align-self: start;
+  align-items: stretch;
+  gap: 12px;
+  font-family: Be Vietnam Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+}
+
+.headerIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  width: 24px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.headerTitle {
+  flex-basis: auto;
+}
+
+.progressSection {
+  background-color: #35284e;
+  border-radius: 20px;
+  align-items: start;
+  gap: 16px;
+  margin-top: 33px;
+  padding: 24px 22px 40px;
+  display: flex;
+}
+
+.levelBadge {
+  color: #fcfcfc;
+  background-color: #d9d9d9;
+  border-radius: 26843500px;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding-top: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: Be Vietnam Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+}
+
+.levelIndicator {
+  z-index: 10;
+  background-color: #7a68ff;
+  border-radius: 26843500px;
+  padding: 4px 6px;
+}
+
+.progressContainer {
+  flex: 1 0 0;
+  width: fit-content;
+  margin-top: 11px;
+}
+
+.progressHeader {
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  font-family: Be Vietnam Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+}
+
+.progressLabel {
+  color: #b4b4b4;
+  font-weight: 400;
+}
+
+.progressValue {
+  color: #fcfcfc;
+  font-weight: 700;
+}
+
+.progressBar {
+  background-color: #1d1d1d;
+  border-radius: 26843500px;
+  flex-direction: column;
+  align-items: start;
+  width: 356px;
+  max-width: 100%;
+  margin-top: 9px;
+  display: flex;
+}
+
+.progressFill {
+  background-color: #7a68ff;
+  border-radius: 26843500px;
+  flex-shrink: 0;
+  width: 160px;
+  height: 8px;
+  display: flex;
+}
+
+.searchContainer {
+  color: #000;
+  background-color: #fff;
+  border-radius: 35px;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 10px 12px;
+  font-family: Be Vietnam Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+}
+
+.searchIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.searchInput {
+  flex: auto;
+  width: 424px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.quizList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.quizCard {
+  background-color: #35284e;
+  border-radius: 18px;
+  padding: 16px;
+  font-family: Be Vietnam Pro, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.quizContent {
+  display: flex;
+  gap: 16px;
+}
+
+.quizImage {
+  background-color: #d9d9d9;
+  border-radius: 3px;
+  flex-shrink: 0;
+  width: 95px;
+  height: 67px;
+}
+
+.quizInfo {
+  flex: 1;
+}
+
+.quizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quizTitle {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.quizXp {
+  color: gold;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.quizStats {
+  color: #fcfcfc;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.quizButton {
+  color: #fcfcfc;
+  background-color: #7a68ff;
+  border-radius: 18px;
+  border: none;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-left: auto;
+  display: block;
+}
+
+@media (width <= 991px) {
+  .rectangle {
+    max-width: 100%;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contentWrapper {
+    margin-bottom: 10px;
+  }
+
+  .progressSection {
+    padding-left: 20px;
+  }
+
+  .levelIndicator {
+    margin-right: -4px;
+  }
+
+  .progressBar {
+    margin-right: 4px;
+    padding-right: 20px;
+  }
+
+  .searchInput {
+    max-width: 100%;
+  }
+
+  .quizButton {
+    white-space: initial;
+    padding-right: 20px;
+  }
+}

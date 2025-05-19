@@ -1,0 +1,54 @@
+.header {
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.seasonBadge {
+  color: gold;
+  background-color: #7a68ff;
+  border-radius: 100px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.controls {
+  gap: 16px;
+  margin-left: auto;
+  display: flex;
+}
+
+.controlButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #7a68ff;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (width <= 640px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .controls {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

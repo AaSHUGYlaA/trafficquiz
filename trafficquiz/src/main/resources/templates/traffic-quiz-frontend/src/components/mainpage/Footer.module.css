@@ -1,0 +1,112 @@
+.footer {
+  background-color: #2a0c5c;
+  border-top: 0.8px solid #ffffff1a;
+  padding-top: 65px;
+}
+
+.footerContent {
+  display: flex;
+  margin-bottom: 64px;
+  padding: 0 24px;
+  margin-left: 50px;
+}
+
+.brandSection {
+  max-width: 358px;
+}
+
+.footerLogo {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+.brandName {
+  color: #fff;
+  margin-bottom: 29px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.brandDescription {
+  color: #fff9;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 22.4px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialButton {
+  color: #fff;
+  background-color: #ffffff1a;
+  border-radius: 17px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 126px;
+  margin-left: 300px;
+}
+
+.linkColumn h3 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.linkColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkColumn a {
+  color: #fff9;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footerBottom {
+  border-top: 0.8px solid #ffffff1a;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.copyright,
+.status {
+  color: #fff9;
+  font-size: 14px;
+}
+
+@media (width <= 991px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footerLinks {
+    gap: 60px;
+    margin-left: 0;
+  }
+}
+
+@media (width <= 640px) {
+  .footerLinks {
+    flex-direction: column;
+    gap: 32px;
+  }
+}

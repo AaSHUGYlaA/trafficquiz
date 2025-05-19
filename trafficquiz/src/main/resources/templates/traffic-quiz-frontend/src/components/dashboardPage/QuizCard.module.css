@@ -1,0 +1,80 @@
+.card {
+  background-color: #2b223e;
+  border-radius: 15px;
+  padding: 24px;
+  position: relative;
+}
+
+.icon {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.completedBadge {
+  color: #fff;
+  background-color: #2be66b;
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.level {
+  color: #fff;
+  background-color: #35284e;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  font-size: 14px;
+}
+
+.stats {
+  color: #b4b4b4;
+  gap: 24px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  display: flex;
+}
+
+.startButton {
+  cursor: pointer;
+  color: #fff;
+  background-color: #7a68ff;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.reviewButton {
+  cursor: pointer;
+  color: #7a68ff;
+  background: transparent;
+  border: 2px solid #7a68ff;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (width <= 640px) {
+  .card {
+    padding: 16px;
+  }
+}

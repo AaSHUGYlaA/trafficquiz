@@ -1,0 +1,373 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body {*/
+/*    font-family: 'Roboto', sans-serif; !* Modern font family *!*/
+/*    background-color: #e0f7fa; !* Light background color *!*/
+/*}*/
+
+/*!* Header styling *!*/
+
+
+
+/* Header - Modern Glassmorphic Design */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(151, 156, 239, 0.9); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blurred background effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 12px;
+    height: 80px;
+}
+
+/* Road-like background */
+.header::after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, #2d2d2d, #000);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    border-top: 3px dashed yellow; /* Road marking */
+}
+
+/* 🚗 Car Animation */
+.car {
+    position: absolute;
+    top: 60px; /* Aligns with the road */
+    left: -60px;
+    width: 60px;
+    height: auto;
+    animation: driveCar 6s linear infinite;
+}
+
+@keyframes driveCar {
+    0% {
+        transform: translateX(-80px) rotate(-5deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(50vw) rotate(2deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw) rotate(-5deg);
+        opacity: 0.5;
+    }
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.logo-image {
+    width: 55px;
+    height: auto;
+    margin-right: 12px;
+    animation: bounce 1.2s infinite alternate;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* 🔗 Navigation Bar */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #7B68EE;
+    color: #282c34;
+    box-shadow: 0 4px 10px rgba(123, 104, 238, 0.5);
+    transform: scale(1.1);
+}
+
+/* 👤 User Status */
+.user-status {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 🔘 Logout Button */
+.btn-logout {
+    background: linear-gradient(135deg, #ff6b6b, #ff1a1a);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 26, 26, 0.5);
+}
+
+.btn-logout:hover {
+    background: linear-gradient(135deg, #e04848, #cc0000);
+    transform: scale(1.1);
+}
+
+/* 🎛️ Responsive Navbar */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(151, 156, 239, 0.9);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* 🌟 Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+
+
+
+
+
+
+
+/*.header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 20px 40px;*/
+/*    background: linear-gradient(to bottom, #979cef, #b9dce1); !* Sky and light gradient *!*/
+/*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+/*    position: relative;*/
+/*}*/
+
+/*!* Road-like background *!*/
+/*.header::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 50px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    height: 20px;*/
+/*    background: #333; !* Road color *!*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);*/
+/*}*/
+
+/*!* Logo Section *!*/
+/*.logo-container {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    animation: slideIn 0.5s forwards;*/
+/*}*/
+
+/*.logo-image {*/
+/*    width: 50px; !* Adjust the logo size *!*/
+/*    height: auto;*/
+/*    margin-right: 10px;*/
+/*    animation: bounce 1s infinite alternate; !* Add bounce effect *!*/
+/*}*/
+
+/*.logo-text {*/
+/*    font-size: 24px;*/
+/*    font-weight: bold;*/
+/*    color: #fff; !* White text for contrast *!*/
+/*}*/
+
+/*!* Navigation Links styling *!*/
+/*.nav-links {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*}*/
+
+/*.nav-links li {*/
+/*    margin: 0 15px;*/
+/*}*/
+
+/*.nav-links a {*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    padding: 10px 15px;*/
+/*    border-radius: 5px;*/
+/*    transition: background-color 0.3s, color 0.3s, transform 0.2s;*/
+/*}*/
+
+/*!* Active link styling *!*/
+/*.nav-links a.active,*/
+/*.nav-links a:hover {*/
+/*    background-color: #7B68EE; !* Soft orange for hover/active *!*/
+/*    color: #282c34;*/
+/*}*/
+
+/*!* User Status Section *!*/
+/*.user-status {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.user-info {*/
+/*    margin-right: 20px;*/
+/*}*/
+
+/*!* Modern Logout button styling *!*/
+/*.btn-logout {*/
+/*    background-color: #d84dff;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    padding: 10px 20px; !* Increased padding for button *!*/
+/*    border-radius: 30px; !* Rounded button *!*/
+/*    font-size: 16px; !* Modern font size *!*/
+/*    font-weight: 500; !* Slightly bolder text *!*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s, transform 0.2s; !* Added transform transition *!*/
+/*}*/
+
+/*.btn-logout:hover {*/
+/*    background-color: #ff1a1a;*/
+/*    transform: translateY(-2px); !* Subtle lift on hover *!*/
+/*}*/
+
+/*!* Responsive design *!*/
+/*@media (max-width: 768px) {*/
+/*    .header {*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*    }*/
+
+/*    .nav-links {*/
+/*        flex-direction: column;*/
+/*        margin-top: 10px;*/
+/*    }*/
+
+/*    .nav-links li {*/
+/*        margin: 5px 0;*/
+/*    }*/
+/*}*/
+
+/*!* Keyframes for animations *!*/
+/*@keyframes slideIn {*/
+/*    from {*/
+/*        transform: translateY(-20px);*/
+/*        opacity: 0;*/
+/*    }*/
+/*    to {*/
+/*        transform: translateY(0);*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
+
+/*@keyframes bounce {*/
+/*    0% {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translateY(-10px);*/
+/*    }*/
+/*}*/
+
+/*!* Car animation *!*/
+/*@keyframes driveCar {*/
+/*    0% {*/
+/*        transform: translateX(-100px);*/
+/*    }*/
+/*    100% {*/
+/*        transform: translateX(100vw);*/
+/*    }*/
+/*}*/
+
+/*!* Car element styling *!*/
+/*.car {*/
+/*    position: absolute;*/
+/*    top: 60px; !* Adjust according to header height *!*/
+/*    width: 50px;*/
+/*    height: auto;*/
+/*    animation: driveCar 5s linear infinite; !* Car driving animation *!*/
+/*}*/

@@ -1,0 +1,67 @@
+.quizSection {
+  background-color: #35284e;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.sectionHeader {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.completion {
+  color: #b4b4b4;
+  font-size: 14px;
+  font-weight: 600;
+}
+/*.quizSection {*/
+/*  background-color: #f5f5f5; !* Светлый фон *!*/
+/*  border-radius: 20px;*/
+/*  padding: 32px;*/
+/*}*/
+
+/*.sectionHeader {*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  margin-bottom: 32px;*/
+/*  display: flex;*/
+/*}*/
+
+/*.title {*/
+/*  color: #1e1e1e; !* Темный текст *!*/
+/*  font-size: 24px;*/
+/*  font-weight: 700;*/
+/*}*/
+
+/*.completion {*/
+/*  color: #5a5a5a; !* Более светлый серый *!*/
+/*  font-size: 14px;*/
+/*  font-weight: 600;*/
+/*}*/
+
+
+.quizGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  display: grid;
+}
+
+@media (width <= 991px) {
+  .quizGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 640px) {
+  .quizSection {
+    padding: 16px;
+  }
+}

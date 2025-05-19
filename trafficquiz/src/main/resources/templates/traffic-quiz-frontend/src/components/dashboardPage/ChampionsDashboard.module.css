@@ -1,0 +1,12 @@
+.dashboard {
+  background-color: #2b223e;
+  min-height: 100vh;
+  padding: 32px;
+  font-family: Inter, sans-serif;
+}
+
+@media (width <= 991px) {
+  .dashboard {
+    padding: 16px;
+  }
+}

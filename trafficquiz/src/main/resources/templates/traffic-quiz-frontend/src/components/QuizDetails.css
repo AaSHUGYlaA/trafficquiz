@@ -1,0 +1,194 @@
+/* Background with Animated Gradient */
+.quiz-result-container {
+    @apply flex items-center justify-center min-h-screen p-6;
+    background: linear-gradient(135deg, #6b46c1, #3182ce);
+    color: white;
+    text-align: center;
+    animation: gradientMove 6s ease infinite;
+}
+
+/* Subtle animated gradient effect */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Quiz Result Card */
+.quiz-result-card {
+    @apply bg-white text-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-2xl;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Ensures centering */
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.quiz-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated Confetti Effect */
+.confetti {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    animation: confettiFall 1s ease-out infinite;
+}
+@keyframes confettiFall {
+    0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    100% { transform: translateX(-50%) translateY(20px); opacity: 0; }
+}
+
+/* Title Styling with Glow */
+.quiz-title {
+    @apply text-4xl font-bold mb-4 text-gray-900 uppercase;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Subtle glowing effect */
+@keyframes glow {
+    from { text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.8); }
+    to { text-shadow: 2px 2px 30px rgba(255, 255, 255, 1); }
+}
+
+/* Dynamic Message Styling */
+.congratulations-message {
+    @apply text-2xl font-semibold mb-4;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Score Styling with Animated Highlight */
+.quiz-score {
+    @apply text-xl font-semibold;
+    padding: 12px;
+    border-radius: 8px;
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Score Colors Based on Performance */
+.high-score { background: linear-gradient(90deg, #16a34a, #22c55e); } /* Green */
+.medium-score { background: linear-gradient(90deg, #facc15, #fbbf24); } /* Yellow */
+.low-score { background: linear-gradient(90deg, #ef4444, #dc2626); } /* Red */
+
+/* Answer Review */
+.answer-review {
+    @apply text-left mt-4;
+}
+
+/* Answer Item */
+.answer-item {
+    @apply p-4 rounded-lg transition-all text-lg;
+    border-left: 6px solid transparent;
+    transition: border-left-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.answer-item:hover {
+    transform: scale(1.02);
+}
+
+.correct-answer {
+    @apply bg-green-100;
+    border-left-color: #34d399;
+}
+
+.wrong-answer {
+    @apply bg-red-100;
+    border-left-color: #ef4444;
+}
+
+/* Buttons */
+.button-container {
+    @apply flex gap-4 mt-8;
+}
+
+.button {
+    @apply px-6 py-3 rounded-lg transition-all font-semibold shadow-md text-white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-home {
+    @apply bg-purple-700 hover:bg-purple-800;
+}
+
+.button-retry {
+    @apply bg-blue-600 hover:bg-blue-700;
+}
+
+/* Button Shine Effect */
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* src/components/QuizDetails.css */
+.quiz-details {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #503C7F;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.quiz-details h2 {
+    color: #503C7F;
+}
+
+.quiz-details button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #503C7F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-details button:hover {
+    background-color: #3A2E5F;
+}

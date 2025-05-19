@@ -1,0 +1,384 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+/* Variables */
+:root {
+  --primary: #33106f;
+  --secondary: #789ade;
+  --text-dark: #100f3e;
+  --text-medium: #444b59;
+  --light-bg: #f8f9ff;
+  --border-color: #c8d3f9;
+  --white: #ffffff;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  height: 50vh;
+  width: 100%;
+  background-color: var(--white);
+}
+
+/* Left section styles */
+.leftSection {
+  width: 50%;
+  padding-left: 16px;
+  padding-right: 8px;
+  margin-top: 320px;
+  margin-left: 130px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mainHeading {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-dark);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.subHeading {
+  display: block;
+  color: var(--primary);
+}
+
+.tagline {
+  font-size: 19px;
+  color: var(--text-medium);
+  line-height: 1.5;
+  max-width: 540px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 17px;
+  color: var(--text-medium);
+  line-height: 1.5;
+  max-width: 540px;
+}
+
+.statsContainer {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+/* Stat card styles */
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--light-bg);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.iconContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.statIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--white);
+}
+
+.statTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.statSubtitle {
+  color: var(--text-medium);
+}
+
+
+
+/* Right section styles */
+.rightSection {
+  width: 50%;
+  padding: 0 16px;
+  margin-top: 350px;
+}
+
+.formContainer {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.welcomeHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-medium);
+  letter-spacing: 0.01em;
+}
+
+.loginText {
+  font-size: 17px;
+  color: var(--text-medium);
+  letter-spacing: 0.01em;
+  margin-top: 16px;
+}
+
+.loginLink {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+/* Form styles */
+.form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inputLabel {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-medium);
+  letter-spacing: 0.01em;
+}
+
+.input {
+  width: 85%;
+  height: 45px;
+  padding: 0 32px;
+  border-radius: 40px;
+  border: 2px solid var(--secondary);
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+
+.input::placeholder {
+  color: rgba(51, 16, 111, 0.5);
+}
+
+.passwordContainer {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 90px;
+}
+
+.passwordIcon {
+  width: 27px;
+  height: 27px;
+  color: rgba(51, 16, 111, 0.5);
+}
+
+.submitButton {
+  width: 30%;
+  height: 40px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 80px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(200, 211, 249, 0.6) inset,
+    4px 8px 12px rgba(78, 99, 141, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(200, 211, 249, 0.7) inset,
+    6px 10px 16px rgba(78, 99, 141, 0.08);
+}
+
+/* Divider styles */
+.dividerContainer {
+  margin-top: 32px;
+  position: relative;
+  text-align: center;
+}
+
+.divider {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.divider::before {
+  content: "";
+  width: 100%;
+  border-top: 2px solid var(--border-color);
+}
+
+.dividerText {
+  position: relative;
+  background-color: var(--white);
+  padding: 0 16px;
+  font-size: 20px;
+  color: var(--text-medium);
+  letter-spacing: 0.1em;
+}
+
+
+
+
+
+/* Social login buttons */
+.socialButtons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.socialButton {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.socialButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.socialIcon {
+  width: 38px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 32px 16px;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .formContainer {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 48px;
+  }
+
+  .tagline,
+  .description {
+    font-size: 20px;
+  }
+
+  .welcomeHeading {
+    font-size: 32px;
+  }
+
+  .loginText,
+  .input,
+  .inputLabel {
+    font-size: 20px;
+  }
+
+  .submitButton {
+    font-size: 24px;
+    height: 64px;
+  }
+
+  .socialButtons {
+    gap: 16px;
+  }
+
+  .socialButton {
+    width: 100px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 36px;
+  }
+
+  .statCard {
+    padding: 12px;
+  }
+
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+  }
+
+  .statIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .input {
+    height: 64px;
+    font-size: 18px;
+  }
+
+  .socialButtons {
+    flex-wrap: wrap;
+  }
+}

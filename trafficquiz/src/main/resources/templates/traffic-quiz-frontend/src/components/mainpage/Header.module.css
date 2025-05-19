@@ -1,0 +1,92 @@
+.header {
+  background-color: #33106f;
+  border-bottom: 0.8px solid #ffffff1a;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.brandName {
+  color: #fff;
+  margin-left: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navigation {
+  margin-left: 265px;
+}
+
+.navList {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.authButtons {
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.signInButton {
+  color: #fff;
+  background-color: #ce82ff;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.getStartedButton {
+  color: #33106f;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+@media (width <= 991px) {
+  .navigation {
+    margin-left: 100px;
+  }
+
+  .navList {
+    gap: 20px;
+  }
+}
+
+@media (width <= 640px) {
+  .header {
+    padding: 12px;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
