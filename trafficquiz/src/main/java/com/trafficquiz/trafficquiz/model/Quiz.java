@@ -49,6 +49,9 @@ public class Quiz {
     @Size(min = 1, max = 255, message = "Title must be between 1 and 255 characters")
     private String title;
 
+    @Column(length = 10)
+    private String icon;
+
 
 //    @Column(nullable = false)
 //    private String title;
@@ -75,6 +78,14 @@ public class Quiz {
                     .collect(Collectors.toList());
             return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
         }
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     public Long getId() {

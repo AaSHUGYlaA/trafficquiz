@@ -33,6 +33,10 @@ public class UserScoreService {
         return userScoreRepository.findTotalScoresGroupedByUser();
     }
 
+    public UserScore saveScore(UserScore userScore) {
+        return userScoreRepository.save(userScore);
+    }
+
 
     public List<UserScore> getLeaderboard(Quiz quiz) {
         return userScoreRepository.findTop10ByQuizOrderByScoreDescCompletionTimeAsc(quiz);

@@ -1,6 +1,7 @@
 package com.trafficquiz.trafficquiz.controller;
 
 
+import com.trafficquiz.trafficquiz.DTO.QuizDTO;
 import com.trafficquiz.trafficquiz.model.Quiz;
 import com.trafficquiz.trafficquiz.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-//@RestController
-//@RequestMapping("/api/quizzes")
+import java.util.stream.Collectors;
+
 @CrossOrigin(origins = "*")
 
-//@CrossOrigin(origins = "http://localhost:3000") // ✅ Allow frontend to access API
 @RestController
 @RequestMapping("/api/quizzes")
 
@@ -22,7 +22,6 @@ public class QuizController {
 
     @Autowired
     private QuizService quizService;
-    // ✅ Get quiz by ID
     @GetMapping("/{id}")
     public ResponseEntity<Quiz> getQuizById(@PathVariable Long id) {
         return quizService.getQuizById(id)
@@ -30,17 +29,16 @@ public class QuizController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Get quizzes with pagination
+    //Get quizzes with pagination
     @GetMapping
     public List<Quiz> getQuizzes(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         Page<Quiz> pagedQuizzes = quizService.getQuizzes(PageRequest.of(page, size));
-        return pagedQuizzes.getContent();  // ✅ Return only quiz list
+        return pagedQuizzes.getContent();  // Return only quiz list
     }
 
-
-    // ✅ Search quizzes by title (if a title is provided)
+    // Search quizzes by title (if a title is provided)
     @GetMapping("/search")
     public List<Quiz> searchQuizzes(@RequestParam(required = false) String title) {
         if (title != null) {
@@ -49,18 +47,28 @@ public class QuizController {
         return quizService.getAllQuizzes();
     }
 
-    // ✅ Get all quizzes without pagination
+    // Get all quizzes without pagination
     @GetMapping("/all")
-    public List<Quiz> getAllQuizzes() {
-        return quizService.getAllQuizzes();
+    public List<QuizDTO> getAllQuizDTOs(@RequestParam Long userId) {
+        return quizService.getAllQuizDTOs(userId);
     }
 
 
-    // ✅ Create a new quiz
+    // Create a new quiz
     @PostMapping
     public Quiz createQuiz(@RequestBody Quiz quiz) {
         return quizService.saveQuiz(quiz);
     }
+
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<QuizDTO>> getQuizzesWithCompletion(@PathVariable Long userId) {
+        List<QuizDTO> quizzes = quizService.getAllQuizDTOs(userId);
+        return ResponseEntity.ok(quizzes);
+    }
+
+
+
 }
 
 

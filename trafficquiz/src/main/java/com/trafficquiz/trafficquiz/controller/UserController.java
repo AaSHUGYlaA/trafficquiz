@@ -81,13 +81,12 @@ public class UserController {
             String token = jwtUtil.generateToken(foundUser.getUsername());
             System.out.println("✅ Login successful, token generated.");
 
-            return ResponseEntity.ok().body(new JwtResponse(token));
+            return ResponseEntity.ok().body(new LoginResponse(token, foundUser.getId(), foundUser.getUsername()));
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal server error.");
         }
     }
-
 }
 
 

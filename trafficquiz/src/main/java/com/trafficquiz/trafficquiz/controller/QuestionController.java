@@ -27,6 +27,7 @@ public class QuestionController {
                 new QuestionDTO(
                         question.getId(),
                         question.getQuestionText(),
+                        question.getImage(),
                         question.getAnswers() != null
                                 ? question.getAnswers().stream()
                                 .map(answer -> new AnswerDTO(answer.getId(), answer.getAnswerText(), answer.isCorrect()))
@@ -35,7 +36,6 @@ public class QuestionController {
                 )
         ).collect(Collectors.toList());
     }
-
 
     @PostMapping
     public Question createQuestion(@RequestBody Question question) {

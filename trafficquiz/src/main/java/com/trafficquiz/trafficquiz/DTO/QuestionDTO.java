@@ -6,11 +6,22 @@ public class QuestionDTO {
     private Long id;
     private String questionText;
     private List<AnswerDTO> answers;
+    private String image;
 
-    public QuestionDTO(Long id, String questionText, List<AnswerDTO> answers) {
+
+    public QuestionDTO(Long id, String questionText, String image, List<AnswerDTO> answers) {
         this.id = id;
         this.questionText = questionText;
         this.answers = answers;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getQuestionText() {
