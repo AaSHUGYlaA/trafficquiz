@@ -30,7 +30,6 @@ public class QuizService {
     public List<Quiz> searchQuizzesByTitle(String title) {
         return quizRepository.findByTitleContainingIgnoreCase(title);
     }
-    // ✅ Get quiz by ID
     public Optional<Quiz> getQuizById(Long id) {
         return quizRepository.findById(id);
     }

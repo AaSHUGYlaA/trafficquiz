@@ -22,10 +22,10 @@ public class User {
     @Column(name = "password_hash")
     private String passwordHash; // Store hashed password
 
-    private String role; // You can decide to use roles (like 'user', 'admin') for authorization
+    private String role;
 
 
-    @Transient  // This field will NOT be stored in the database
+    @Transient
     private String password;
 
     public String getPassword() {
